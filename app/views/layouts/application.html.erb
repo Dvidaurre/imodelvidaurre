@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Imodel</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<div class="pagebody">
+	<body>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+	<div class="navigation group">
+	 	<nav class="navheader">
+			<ul>
+				<li><%= link_to "News", root_path %></li>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Contacto", root_path %></li>
+			</ul>
+		</nav>
+		<nav class="navheader2">
+			<ul>
+				<li><%= link_to "Log in",  root_path %></li>
+				<li class="butns"><%= link_to "Sign up", root_path %></li>
+			</ul>	
+		</nav>
+	</div>
+	<%= yield %>
+
+	</body>
+</div>
+</html>

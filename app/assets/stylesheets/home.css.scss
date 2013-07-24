@@ -1,0 +1,186 @@
+//links de toda la pagina ( sin estilos)
+a{
+	text-decoration:none;
+
+}
+body{
+	padding:0;
+}
+
+//barra de navegacion
+.pagebody{
+	background-color:#fff;
+//// HEADER ////////////////	
+}
+.navigation .navheader li {
+	margin-left:20px;
+	display:inline;
+	font-size:1em;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.navheader2 .butns a{
+	background-color:#449D99;
+	border:0;
+	border-radius:3px;
+				&:hover{
+					color:#fff;
+				}
+
+}
+
+.navigation .navheader2 li{
+	display:inline;
+	margin-left:20px;
+	font-size:1em;
+	font-family: 'Open Sans', sans-serif;
+}
+.navigation .navheader{
+	float: left;
+	position:relative;
+}
+.navigation .navheader2{
+	float: right;
+	margin-right:30px;
+	position:relative;
+}
+
+.navigation{
+	background-color:#F0F0E1;
+	display:block;
+	padding:20px;
+}
+.navheader a{
+	color:#53554F;
+		&:hover{
+		color:#449D99;
+	}
+}
+
+.navheader2 a{
+	color:#53554F;
+		&:hover{
+		color:#449D99;
+	}
+}
+
+// header del home
+.homeheader{
+	font-size: 67px;
+	margin-top: -8%;	
+}
+// frase bajo el header
+.homeheader2{
+	margin-top: -90px;
+	font-size: 26px;
+
+	font-style: italic;
+	color :#449D99;
+}
+
+
+//////////// FIN HEADER //////////////////
+
+.homeimages li{
+	display:inline;
+	float:left;
+	margin-left:5px;
+}
+.homeimages{
+	display:block;
+	background-color:#F0F0E1;
+}
+.himageright{
+	float:right;
+}
+.joinbutton a{
+display:block;
+background-color:#F0F0E1;
+padding:20px 25px;
+width:200px;
+border:0;
+border-radius:3px;
+color:#53554F;
+text-transform:uppercase;
+font-size:1em;
+font-family: 'Open Sans', sans-serif;
+			&:hover{
+		color:#449D99;
+	}
+}
+
+
+
+
+// Mensaje principal
+
+.mainbody{
+	width:960px;
+	margin-left:10%;
+}
+
+.box1{
+	display:block;
+	background-color:#fff;
+	font-size:20px;
+	width:460px;
+	border:0;
+	float:right;
+	margin:auto;
+	border-radius:3px;
+	margin: auto;
+	margin-bottom: 10px;
+	padding: 10px 0 0 18px;
+	height:200px;
+	color:#6A6D5C;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.boxvideo{
+}
+
+
+
+
+///FOOOTER//////
+
+.homefooter{
+	margin: -22px -10px -10px -10px;
+	display:block;
+	color:#53554F;
+	height:35px;
+	font-family: 'Open Sans', sans-serif;
+	background-color:#F0F0E1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//clearfix
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+.group:after{
+	clear:both;
+}
+.group{
+	zoom: 1; 
+}
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
