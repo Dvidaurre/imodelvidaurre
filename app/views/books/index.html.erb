@@ -1,0 +1,13 @@
+<h1> Books indexs!</h1>
+<% @books.each do |book| %>
+<table>
+	<tr>
+	<%= book.title %>
+	<%= link_to "Show", book %>
+	<%= link_to "Destroy", book, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</tr>	
+	
+	
+</table>
+
+<% end %>

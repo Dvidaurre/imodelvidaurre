@@ -1,0 +1,8 @@
+<h1>Picture index</h1>
+<% @picture.each do |picture| %>
+
+	<%= image_tag picture.image_url(:thumb) %>
+	<%= link_to 'Show', picture %>
+	<%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>	

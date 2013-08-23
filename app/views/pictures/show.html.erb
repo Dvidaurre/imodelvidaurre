@@ -1,0 +1,6 @@
+<h1>This is your picture</h1>
+<p>
+	<%= @picture.id %>
+</p>
+<%= image_tag @picture.image_url(:thumb) %>
+<%= link_to "Back", pictures_path %>

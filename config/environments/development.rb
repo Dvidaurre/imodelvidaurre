@@ -35,3 +35,6 @@ Imodel::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+FACEBOOK_ID = "188879674622812"
+FACEBOOK_SECRET = "169ecf91f03c1a2f3d48b968e43ab073"

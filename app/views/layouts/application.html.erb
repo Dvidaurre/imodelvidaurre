@@ -15,12 +15,29 @@
 				<li><%= link_to "News", new_post_path %></li>
 				<li><%= link_to "Home", new_book_path %></li>
 				<li><%= link_to "Contacto", root_path %></li>
+				<li><%= link_to "Books", books_path %></li>
+				<li><%= link_to "Pictures", pictures_path %></li>
 			</ul>
+			<div id="user_nav">
+  <% if current_user %>
+    Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+  <% end %>
+</div>
 		</nav>
 		<nav class="navheader2">
 			<ul>
 				<li><%= link_to "Log in",  root_path %></li>
-				<li class="butns"><%= link_to "Sign up", root_path %></li>
+				<li class="butns">
+					<% if current_user %>
+				<%= current_user.name %>
+				<%= link_to "Sign out", signout_path, id: "sign_out" %>
+				<% else %>
+				<%= link_to "Sign in with facebook", "auth/facebook", id: "sign_in" %>
+					<% end %>
+				</li>
 			</ul>	
 		</nav>
 	</div>
