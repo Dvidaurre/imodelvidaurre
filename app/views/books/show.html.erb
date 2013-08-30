@@ -6,5 +6,9 @@
 		<%= image_tag picture.image_url(:thumb) %>
 
 	<% end %>
+	<% if current_user == @book.user %>
+		<%= link_to "Add a picture", new_picture_path %>
+	<% end %>	
+
 
 	<%= link_to "Back", root_path %>

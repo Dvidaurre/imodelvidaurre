@@ -1,13 +1,30 @@
-<h1> Books indexs!</h1>
-<% @books.each do |book| %>
-<table>
-	<tr>
-	<%= book.title %>
-	<%= link_to "Show", book %>
-	<%= link_to "Destroy", book, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</tr>	
-	
-	
-</table>
+<div class="mainbodypage">
 
-<% end %>
+	<h1> Books indexs!</h1>
+	<% @books.each do |book| %>
+	<table>
+		<tr>
+		<%= book.title %>
+
+		<% if book.pictures.any? %>
+			<%= image_tag book.pictures.first.image_url(:thumb) %>
+		<% end %>	
+
+
+
+		<%= link_to "Show", book %>
+
+		<% if current_user == book.user %>
+			<%= link_to "Destroy", book, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+		</tr>	
+		
+		
+	</table>
+
+	<% end %>
+
+
+
+
+</div>

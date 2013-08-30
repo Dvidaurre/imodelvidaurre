@@ -5,44 +5,15 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+  
 </head>
-<div class="pagebody">
-	<body>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
-	<div class="navigation group">
-	 	<nav class="navheader">
-			<ul>
-				<li><%= link_to "News", new_post_path %></li>
-				<li><%= link_to "Home", new_book_path %></li>
-				<li><%= link_to "Contacto", root_path %></li>
-				<li><%= link_to "Books", books_path %></li>
-				<li><%= link_to "Pictures", pictures_path %></li>
-			</ul>
-			<div id="user_nav">
-  <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  <% end %>
-</div>
-		</nav>
-		<nav class="navheader2">
-			<ul>
-				<li><%= link_to "Log in",  root_path %></li>
-				<li class="butns">
-					<% if current_user %>
-				<%= current_user.name %>
-				<%= link_to "Sign out", signout_path, id: "sign_out" %>
-				<% else %>
-				<%= link_to "Sign in with facebook", "auth/facebook", id: "sign_in" %>
-					<% end %>
-				</li>
-			</ul>	
-		</nav>
-	</div>
-	<%= yield %>
 
-	</body>
-</div>
+<body>
+  <%= render '/layouts/navigation' %>
+  <%= render '/layouts/flashes' %>
+
+  <%= yield %>
+ 
+</body>
 </html>

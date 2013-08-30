@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_filter :require_session, only: [:new, :destroy, :edit, :update]
   # GET /posts
   # GET /posts.json
   def index

@@ -1,0 +1,19 @@
+.flash{
+	padding: 5px;
+	color: #fff;
+	cursor: pointer;
+	@include border-radius(5px);
+	&.flash-alert{
+		background-color: #B70000;
+		color: #fff;
+		&:hover{
+			background-color: #800000;
+		}
+	}
+	&.flash-notice{
+		background-color: #2980b9;
+		&:hover{
+			background-color: #1f6491;
+		}
+	}
+}

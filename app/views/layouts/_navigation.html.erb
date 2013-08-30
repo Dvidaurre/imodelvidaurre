@@ -1,0 +1,29 @@
+<div class="navigation group">
+  <nav class="navheader">
+    <ul>
+      <li><%= link_to "News", posts_path %></li>
+      <% if current_user and current_user.books.any? %>
+        <li><%= link_to "My Book", current_user.books.first %></li>
+      <% elsif current_user %>  
+       <li><%= link_to "New Book", new_book_path %></li>
+      <% end %> 
+      <li><%= link_to "Books", books_path %></li>
+      <li><%= link_to "Pictures", pictures_path %></li>
+      <li><%= link_to "Home", root_path %></li>
+    </ul>
+
+  </nav>
+  <nav class="navheader2">
+    <ul>
+      <li><%= link_to "Log in",  root_path %></li>
+      <li class="butns">
+        <% if current_user %>
+      <%= current_user.name %>
+      <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <% else %>
+      <%= link_to "Sign in with facebook", "auth/facebook", id: "sign_in" %>
+        <% end %>
+      </li>
+    </ul> 
+  </nav>
+</div>

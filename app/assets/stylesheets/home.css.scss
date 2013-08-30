@@ -6,7 +6,8 @@ a{
 body{
 	padding:0;
 }
-
+.errormodal{
+}
 //barra de navegacion
 .pagebody{
 	background-color:#fff;
@@ -46,7 +47,7 @@ body{
 }
 
 .navigation{
-	background-color:#F0F0E1;
+	background-color:#D6D6AD;
 	display:block;
 	padding:20px;
 }
@@ -68,6 +69,7 @@ body{
 .homeheader{
 	font-size: 67px;
 	margin-top: -8%;	
+	
 }
 // frase bajo el header
 .homeheader2{
